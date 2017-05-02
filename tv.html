@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="tv.css">
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- 掛載CSS樣式 -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+	<script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<script>
+	var mydata={color: ["#FFF6FB","#FFBEE3","#FC5BB6","#FF0592","#F70776","#C3195D"]}
+
+	var vm= new Vue({
+		el: '#app',
+		data: mydata
+});
+	</script>
+
+	<div class="circles" id="app">
+	  <div class="row">
+	    <div class="col-sm-4">
+	      <div class="circle one" style="background-color:{{color[0]}}">
+	        <input v-model="color[0]"/>
+	      </div>
+	      <div class="circle two" style="background-color:{{color[1]}}">
+	        <input v-model="color[1]"/>
+	      </div>
+	      <div class="circle three" style="background-color:{{color[2]}}">
+	        <input v-model="color[2]"/>
+	      </div>
+	      <div class="circle four" style="background-color:{{color[3]}}">
+	        <input v-model="color[3]"/>
+	      </div>
+	      <div class="circle five" style="background-color:{{color[4]}}">
+	        <input v-model="color[4]"/>
+	      </div>
+	      <div class="circle six" style="background-color:{{color[5]}}">
+	        <input v-model="color[5]"/>
+	      </div>
+	    </div>
+			<div class="col-sm-8">
+      <div class="tv"></div>
+      <div class="screen">
+        <div class="row">
+          <div class="col-sm-2 top" style="background-color:{{color[0]}}"> </div>
+          <div class="col-sm-2 top" style="background-color:{{color[1]}}"></div>
+          <div class="col-sm-2 top" style="background-color:{{color[2]}}"></div>
+          <div class="col-sm-2 top" style="background-color:{{color[3]}}"></div>
+          <div class="col-sm-2 top" style="background-color:{{color[4]}}"></div>
+          <div class="col-sm-2 top" style="background-color:{{color[5]}}"></div>
+          <div class="col-sm-2 bottom" style="background-color:{{color[3]}}"> </div>
+          <div class="col-sm-2 bottom" style="background-color:{{color[5]}}"> </div>
+          <div class="col-sm-2 bottom" style="background-color:{{color[0]}}"> </div>
+          <div class="col-sm-2 bottom" style="background-color:{{color[2]}}"> </div>
+          <div class="col-sm-2 bottom" style="background-color:{{color[1]}}"> </div>
+          <div class="col-sm-2 bottom" style="background-color:{{color[4]}}"> </div>
+        </div>
+      </div>
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="button button1"></div>
+      <div class="button button2"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

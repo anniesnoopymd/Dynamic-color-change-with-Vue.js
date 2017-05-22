@@ -105,3 +105,8 @@ li {
   border-radius: 50%;
   margin-bottom: -140px;
 }
+hr{
+   width: 200px;
+   margin-left: 0;
+   border: 1px solid #ddd;
+}
